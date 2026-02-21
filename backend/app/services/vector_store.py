@@ -37,20 +37,21 @@ def add_documents(
 
 
 def query_documents(query_embedding: list[float], top_k: int = 3):
-    """
-    Retrieve top_k most similar documents.
-    """
+    if index.ntotal == 0:
+        return []
+
     query_vector = np.array([query_embedding]).astype("float32")
 
     distances, indices = index.search(query_vector, top_k)
 
     results = []
 
-    for idx in indices[0]:
+    for rank, idx in enumerate(indices[0]):
         if idx < len(stored_texts):
             results.append({
                 "text": stored_texts[idx],
-                "metadata": stored_metadatas[idx]
+                "metadata": stored_metadatas[idx],
+                "score": float(distances[0][rank])
             })
 
     return results
