@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ─── Design Tokens ─────────────────────────────── */
+:root {
+    --color-bg: #ffffff;
+    --color-sidebar: #faf7f4;
+    --color-sidebar-border: #f0eae3;
+
+    --color-accent-orange: #f4845f;
+    --color-accent-purple: #9b72cf;
+    --color-accent-peach: #fddccc;
+    --color-accent-blue: #6fb3f2;
+    --color-accent-mint: #b5e5d8;
+
+    --color-text-primary: #1e1b2e;
+    --color-text-secondary: #6b6780;
+    --color-text-muted: #a09db8;
+
+    --color-user-bubble: #f4845f;
+    --color-ai-bubble: #f8f4ff;
+    --color-ai-border: #e8dff7;
+
+    --color-source-bg: #fffdf9;
+    --color-source-border: #ead9c0;
+    --color-source-highlight: #fff3e6;
+
+    --color-input-bg: #fdfcff;
+    --color-input-border: #e0d9f0;
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    --font-body: 'Inter', sans-serif;
+    --font-display: 'Lora', serif;
+
+    --sidebar-width: 280px;
+    --source-width: 300px;
+}
+
+/* ─── Reset ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+textarea,
+input {
+    font-family: inherit;
+}
+
+/* ─── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
