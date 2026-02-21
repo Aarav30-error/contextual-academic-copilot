@@ -41,3 +41,8 @@ node_modules/
 
 # OS files
 .DS_Store
+
+# Testing / temp files
+sample.pdf
+test_*.py
+make_pdf.py
