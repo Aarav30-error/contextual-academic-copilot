@@ -41,3 +41,25 @@ node_modules/
 
 # OS files
 .DS_Store
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# HuggingFace cache
+.cache/
+
+# FAISS / vector files (if added later)
+*.index
+*.faiss
